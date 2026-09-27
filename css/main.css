@@ -1,0 +1,90 @@
+.window {
+    position: absolute;
+
+    width: 500px;
+    height: 350px;
+
+    top: 100px;
+    left: 200px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.window-header {
+    height: 45px;
+
+    background: #1e293b;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+}
+
+.close-button {
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.window-content {
+    padding: 20px;
+
+    color: #111827;
+}
+
+.window-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.minimize-button,
+.close-button {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.file-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.file-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.file-item span {
+    font-size: 38px;
+}
+
+.file-item p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.file-item:hover {
+    background: #e5e7eb;
+}

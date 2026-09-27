@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ScriptOS</title>
+
+    <link rel="stylesheet" href="./css/desktop.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <!-- Desktop -->
+    <main class="desktop">
+
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+
+            <button class="desktop-icon">
+                <span class="icon">📁</span>
+                <span class="icon-name">File Manager</span>
+            </button>
+
+            <button class="desktop-icon">
+                <span class="icon">📝</span>
+                <span class="icon-name">Text Editor</span>
+            </button>
+
+            <button class="desktop-icon">
+                <span class="icon">⚙️</span>
+                <span class="icon-name">Settings</span>
+            </button>
+
+        </div>
+
+
+        <!-- Taskbar -->
+        <footer class="taskbar">
+
+            <button class="start-button">
+                ◉
+            </button>
+
+            <div class="running-apps" id="running-apps"></div>
+
+            <div class="system-tray">
+
+                <span class="status">●</span>
+
+                <span class="clock">
+                    00:00
+                </span>
+
+            </div>
+
+        </footer>
+
+    </main>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
