@@ -74,6 +74,7 @@
     padding: 10px;
     border-radius: 8px;
     cursor: pointer;
+    user-select: none;
 }
 
 .file-item span {
@@ -88,3 +89,4 @@
 .file-item:hover {
     background: #e5e7eb;
 }
+

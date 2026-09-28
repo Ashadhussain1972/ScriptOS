@@ -31,19 +31,30 @@ The project is being developed step-by-step, with each feature tested before mov
 * Close window
 * File and folder grid
 * Hover interaction
+* Double-click file/folder interaction
+* Virtual filesystem
+* Folder navigation
+* Dynamic file rendering
 
-### Current File Manager Items
+### Current File Manager Structure
 
 ```text
 📁 Documents
+    📄 Resume.txt
+    📄 Projects.txt
+
 📁 Downloads
+    📄 setup.txt
+    📄 notes.txt
+
 📁 Pictures
+    📄 ScriptOS.png
+
 📁 Music
-📄 README.txt
-📄 notes.txt
+    📄 song.txt
 ```
 
-> These are currently static items. The virtual file system will be implemented in a later stage.
+> The current filesystem is virtual and stored in JavaScript. Files are not yet stored as actual files on the computer.
 
 ## 🛠️ Tech Stack
 
@@ -59,6 +70,7 @@ No frontend framework is being used.
 
 ```text
 ScriptOS/
+
 │
 ├── assets/
 │
@@ -87,8 +99,10 @@ This project is being used to practice and demonstrate:
 * Application state
 * Mouse events
 * Dragging
-* Event delegation
+* Virtual filesystem state
+* Dynamic rendering
 * `querySelector()`
+* `querySelectorAll()`
 * `createElement()`
 * `appendChild()`
 * `remove()`
@@ -115,7 +129,7 @@ More advanced concepts will be introduced as the project grows.
 * [x] Restore
 * [x] Close
 * [x] File/folder display
-* [ ] Folder navigation
+* [x] Folder navigation
 * [ ] Create file
 * [ ] Create folder
 * [ ] Rename
@@ -126,8 +140,8 @@ More advanced concepts will be introduced as the project grows.
 
 ### Phase 3 — Virtual File System
 
-* [ ] File system state
-* [ ] Folder hierarchy
+* [x] File system state
+* [x] Basic folder hierarchy
 * [ ] File metadata
 * [ ] Persistent storage
 * [ ] LocalStorage
@@ -166,19 +180,20 @@ The goal is to simulate an operating-system-like environment in the browser whil
 
 ## 📈 Development Progress
 
-| Feature                | Status         |
-| ---------------------- | -------------- |
-| Desktop UI             | ✅ Complete     |
-| Taskbar                | ✅ Complete     |
-| File Manager Window    | ✅ Complete     |
-| Window Dragging        | ✅ Complete     |
-| Minimize / Restore     | ✅ Complete     |
-| File & Folder Display  | ✅ Complete     |
-| Functional File System | 🔄 In Progress |
-| Text Editor            | ⏳ Planned      |
-| Calculator             | ⏳ Planned      |
-| Settings               | ⏳ Planned      |
-| Persistent Storage     | ⏳ Planned      |
+| Feature               | Status         |
+| --------------------- | -------------- |
+| Desktop UI            | ✅ Complete     |
+| Taskbar               | ✅ Complete     |
+| File Manager Window   | ✅ Complete     |
+| Window Dragging       | ✅ Complete     |
+| Minimize / Restore    | ✅ Complete     |
+| File & Folder Display | ✅ Complete     |
+| Virtual File System   | 🔄 In Progress |
+| Folder Navigation     | ✅ Complete     |
+| Text Editor           | ⏳ Planned      |
+| Calculator            | ⏳ Planned      |
+| Settings              | ⏳ Planned      |
+| Persistent Storage    | ⏳ Planned      |
 
 ## 🚀 Getting Started
 
@@ -200,12 +215,22 @@ Example commit structure:
 
 ```text
 chore: initialize ScriptOS project
+
 docs: add project roadmap
+
 feat: build desktop shell
+
 feat: build file manager window
+
 feat: add window dragging
+
 feat: add minimize and restore
+
 feat: add file manager grid
+
+feat: add virtual filesystem
+
+feat: add folder navigation
 ```
 
 ## 👨‍💻 Author
