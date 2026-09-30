@@ -19,7 +19,8 @@ The project is being developed step-by-step, with each feature tested before mov
 * Taskbar
 * Start button
 * System tray
-* Clock placeholder
+* Live clock
+* Online/offline status indicator
 
 ### File Manager
 
@@ -31,27 +32,35 @@ The project is being developed step-by-step, with each feature tested before mov
 * Close window
 * File and folder grid
 * Hover interaction
-* Double-click file/folder interaction
+* Double-click interaction
 * Virtual filesystem
-* Folder navigation
 * Dynamic file rendering
+* Folder navigation
+* Nested folder navigation
+* Back button
+* Current folder indicator
 
-### Current File Manager Structure
+## 📁 Current Virtual File System
 
 ```text
-📁 Documents
-    📄 Resume.txt
-    📄 Projects.txt
-
-📁 Downloads
-    📄 setup.txt
-    📄 notes.txt
-
-📁 Pictures
-    📄 ScriptOS.png
-
-📁 Music
-    📄 song.txt
+This PC
+│
+├── 📁 Documents
+│   ├── 📁 Projects
+│   │   ├── 📄 project1.txt
+│   │   └── 📄 project2.txt
+│   │
+│   └── 📄 Resume.docx
+│
+├── 📁 Downloads
+│   ├── 📄 setup.txt
+│   └── 📄 notes.txt
+│
+├── 📁 Pictures
+│   └── 📄 image1.png
+│
+└── 📁 Music
+    └── 📄 song1.mp3
 ```
 
 > The current filesystem is virtual and stored in JavaScript. Files are not yet stored as actual files on the computer.
@@ -98,9 +107,11 @@ This project is being used to practice and demonstrate:
 * Conditional logic
 * Application state
 * Mouse events
-* Dragging
+* Window dragging
 * Virtual filesystem state
 * Dynamic rendering
+* Folder navigation
+* Nested folder navigation
 * `querySelector()`
 * `querySelectorAll()`
 * `createElement()`
@@ -118,7 +129,7 @@ More advanced concepts will be introduced as the project grows.
 * [x] Desktop icons
 * [x] Taskbar
 * [x] Start button
-* [ ] Functional clock
+* [x] Functional clock
 * [ ] Start menu
 
 ### Phase 2 — File Manager
@@ -130,6 +141,8 @@ More advanced concepts will be introduced as the project grows.
 * [x] Close
 * [x] File/folder display
 * [x] Folder navigation
+* [x] Nested folders
+* [x] Back button
 * [ ] Create file
 * [ ] Create folder
 * [ ] Rename
@@ -146,6 +159,7 @@ More advanced concepts will be introduced as the project grows.
 * [ ] Persistent storage
 * [ ] LocalStorage
 * [ ] IndexedDB
+* [ ] Folder navigation history
 
 ### Phase 4 — Applications
 
@@ -174,26 +188,30 @@ The goal is to simulate an operating-system-like environment in the browser whil
 * State management
 * DOM-based applications
 * Browser APIs
-* Event-driven programming
 * Persistent data
+* Event-driven programming
 * Modular application design
 
 ## 📈 Development Progress
 
-| Feature               | Status         |
-| --------------------- | -------------- |
-| Desktop UI            | ✅ Complete     |
-| Taskbar               | ✅ Complete     |
-| File Manager Window   | ✅ Complete     |
-| Window Dragging       | ✅ Complete     |
-| Minimize / Restore    | ✅ Complete     |
-| File & Folder Display | ✅ Complete     |
-| Virtual File System   | 🔄 In Progress |
-| Folder Navigation     | ✅ Complete     |
-| Text Editor           | ⏳ Planned      |
-| Calculator            | ⏳ Planned      |
-| Settings              | ⏳ Planned      |
-| Persistent Storage    | ⏳ Planned      |
+| Feature                  | Status         |
+| ------------------------ | -------------- |
+| Desktop UI               | ✅ Complete     |
+| Taskbar                  | ✅ Complete     |
+| Functional Clock         | ✅ Complete     |
+| Online/Offline Status    | ✅ Complete     |
+| File Manager Window      | ✅ Complete     |
+| Window Dragging          | ✅ Complete     |
+| Minimize / Restore       | ✅ Complete     |
+| File & Folder Display    | ✅ Complete     |
+| Virtual File System      | 🔄 In Progress |
+| Folder Navigation        | ✅ Complete     |
+| Nested Folder Navigation | ✅ Complete     |
+| Back Button              | ✅ Complete     |
+| Text Editor              | ⏳ Planned      |
+| Calculator               | ⏳ Planned      |
+| Settings                 | ⏳ Planned      |
+| Persistent Storage       | ⏳ Planned      |
 
 ## 🚀 Getting Started
 
@@ -231,6 +249,10 @@ feat: add file manager grid
 feat: add virtual filesystem
 
 feat: add folder navigation
+
+feat: add nested folder navigation
+
+feat: add file manager back button
 ```
 
 ## 👨‍💻 Author

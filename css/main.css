@@ -90,3 +90,41 @@
     background: #e5e7eb;
 }
 
+/* ================================
+   FILE MANAGER NAVIGATION
+================================ */
+
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.back-button {
+    border: none;
+
+    background: #e5e7eb;
+    color: #111827;
+
+    padding: 6px 12px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background: #d1d5db;
+}
+
+.current-folder {
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #374151;
+}
